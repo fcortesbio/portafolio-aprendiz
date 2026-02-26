@@ -63,6 +63,8 @@ Conceptos biológicos traidos a sistemas tecnológicos se traducen en arquitectu
 | **Finalidad**         | Los sistemas están orientados hacia un objetivo o propósito (teleología) -- biológicamente *deprecated* | Todo desarrollo debe alinearse con los "Requerimientos de Negocio" o el éxito del usuario final                  |
 | **Entropía negativa** | Resistencia al desorden mediante información                                                            | Refactorización y mantenimiento para evitar la degradación del código                                            |
 | **Caja negra**        | Se conocen entradas/salidas, no procesos internos.                                                      | Uso de Interfaces donde solo importa el input/output.                                                            |
+
+
 La **Equipotencialidad** y la **Homeostasis** son quizás los conceptos más modernos y críticos en la arquitectura de backend actual. Mientras que la **Mecanización** es el objetivo primordial de la ingeniería: transformar procesos manuales (sistemas sociales) en procesos automáticos (sistemas abstractos).
 
 ---
