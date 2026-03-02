@@ -1,0 +1,35 @@
+name: Sync to Google Drive
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Rclone
+        run: sudo apt-get install -y rclone
+
+      - name: Sync Files
+        env:
+          GDRIVE_TOKEN: ${{ secrets.RCLONE_GDRIVE_TOKEN }}
+          FOLDER_ID: ${{ secrets.FOLDER_ID }}
+        run: |
+          # Configuramos el remoto 'gdrive' usando tu token personal
+          export RCLONE_CONFIG_GDRIVE_TYPE=drive
+          export RCLONE_CONFIG_GDRIVE_SCOPE=drive
+          export RCLONE_CONFIG_GDRIVE_TOKEN="$GDRIVE_TOKEN"
+          export RCLONE_CONFIG_GDRIVE_ROOT_FOLDER_ID="$FOLDER_ID"
+          
+          # Sincronización limpia
+          rclone copy . gdrive: \
+            --drive-acknowledge-abuse \
+            --exclude ".git/**" \
+            --exclude ".github/**" \
+            --exclude ".obsidian/**" \
+            -v
