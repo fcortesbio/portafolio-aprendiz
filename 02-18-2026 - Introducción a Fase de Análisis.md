@@ -11,8 +11,6 @@ https://docs.google.com/forms/d/e/1FAIpQLScOgJnU_TxiJVKsMojw8o0WBgmg0YtessxPqFNF
 ---
 ## 1. Cronograma de Entregas y Compromisos
 
-Es fundamental cumplir con el cronograma para la Fase de Análisis:
-
 | **Fecha Límite** | **Actividad**                           | **Tipo**   | **Detalle**                                      |
 | ---------------- | --------------------------------------- | ---------- | ------------------------------------------------ |
 | **23 Feb**       | Evidencia 1: Infografía sobre TGS       | Individual | Entregada.                                       |
